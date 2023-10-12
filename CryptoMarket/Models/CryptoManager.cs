@@ -15,7 +15,7 @@ namespace CryptoMarket.Models
             new Crypto() { Symbol="SHIB", Name="Shiba Inu",CurrentPrice=0.00014, MarketCap=12000000000.45 } 
         };
 
-        public static ObservableCollection<Crypto> _GetUsers()
+        public static ObservableCollection<Crypto> _GetCryptos()
         {
             return _DatabaseCrypto;
         }

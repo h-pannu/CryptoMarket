@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoMarket.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace CryptoMarket.Views
         public CryptoList()
         {
             InitializeComponent();
+            CryptoListViewModel cryptoListViewModel = new CryptoListViewModel();
+            this.DataContext = cryptoListViewModel;
         }
     }
 }
