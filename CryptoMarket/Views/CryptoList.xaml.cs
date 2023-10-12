@@ -1,4 +1,5 @@
-﻿using CryptoMarket.ViewModel;
+﻿using CryptoMarket.Models;
+using CryptoMarket.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,17 @@ namespace CryptoMarket.Views
             InitializeComponent();
             CryptoListViewModel cryptoListViewModel = new CryptoListViewModel();
             this.DataContext = cryptoListViewModel;
+        }
+
+        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CryptoListControl.Items.Filter = FilterMethod;
+        }
+
+        private bool FilterMethod(object obj)
+        {
+            var crypto = (Crypto)obj;
+            return crypto.Name.Contains(FilterTextBox.Text, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
