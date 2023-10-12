@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CryptoMarket.Views"
         mc:Ignorable="d"
-        Title="Crypto List" Height="450" Width="800">
+        Title="Crypto List" Height="450" Width="800" Name="CryptoListView">
     <Grid Background="AliceBlue">
         <Grid Background="White" Grid.Row="1" Margin="25,40,25,15">
             <Grid.RowDefinitions>
@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Row="0" Grid.Column="0" Name="FilterTextBox" TextChanged="FilterTextBox_TextChanged" Height="30" Width="200" Background="AliceBlue"/>
-            <Button Grid.Row="0" Command="{Binding ShowWindowCommand}" Grid.Column="1" Height="30" Width="100" Content="Add Crypto" Background="LightBlue"/>
+            <Button Grid.Row="0" Command="{Binding ShowWindowCommand}" CommandParameter="{x:Reference Name = CryptoListView }" Grid.Column="1" Height="30" Width="100" Content="Add Crypto" Background="LightBlue"/>
             <ListView Name="CryptoListControl" ItemsSource="{Binding Cryptos}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="AliceBlue" Margin="25,20,25,25">
                 <ListView.View>
                     <GridView>

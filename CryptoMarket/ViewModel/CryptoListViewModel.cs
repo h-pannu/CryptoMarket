@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace CryptoMarket.ViewModel
@@ -30,7 +31,11 @@ namespace CryptoMarket.ViewModel
 
         private void ShowWindow(object obj)
         {
+            var CryptoListWindow = obj as Window;
+
             AddCrypto addCryptoWin = new AddCrypto();
+            addCryptoWin.Owner = CryptoListWindow;
+            addCryptoWin.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             addCryptoWin.ShowDialog();
         }
     }
