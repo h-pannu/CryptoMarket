@@ -22,14 +22,14 @@
             </Grid.RowDefinitions>
             <Label Content="Add Crypto Detail:" FontSize="25" FontWeight="Bold" Width="300" Height="50" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Label Content="Symbol:" Width="100" Height="30" Background="AliceBlue" Grid.Row="1" Grid.Column="0"/>
-            <TextBox Name="txtSymbol" Width="200" Height="30" Grid.Row="1" Grid.Column="1" Background="AliceBlue"/>
+            <TextBox Name="txtSymbol" Text="{Binding _Symbol}" Width="200" Height="30" Grid.Row="1" Grid.Column="1" Background="AliceBlue"/>
             <Label Content="Name:" Width="100" Height="30" Background="AliceBlue" Grid.Row="2" Grid.Column="0"/>
-            <TextBox Name="txtName" Width="200" Height="30" Grid.Row="2" Grid.Column="1" Background="AliceBlue"/>
+            <TextBox Name="txtName" Text="{Binding _Name}" Width="200" Height="30" Grid.Row="2" Grid.Column="1" Background="AliceBlue"/>
             <Label Content="Current price:" Width="100" Height="30" Background="AliceBlue" Grid.Row="3" Grid.Column="0"/>
-            <TextBox Name="txtCurrentprice" Width="200" Height="30" Grid.Row="3" Grid.Column="1" Background="AliceBlue"/>
+            <TextBox Name="txtCurrentprice" Text="{Binding _CurrentPrice}" Width="200" Height="30" Grid.Row="3" Grid.Column="1" Background="AliceBlue"/>
             <Label Content="Marketcap:" Width="100" Height="30" Background="AliceBlue" Grid.Row="4" Grid.Column="0"/>
-            <TextBox Name="txtMarketCap" Width="200" Height="30" Grid.Row="4" Grid.Column="1" Background="AliceBlue"/>
-            <Button Content="Save" FontSize="25" FontWeight="Bold" Width="200" Height="50" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Name="txtMarketCap" Text="{Binding _MarketCap}" Width="200" Height="30" Grid.Row="4" Grid.Column="1" Background="AliceBlue"/>
+            <Button Content="Save" Command="{Binding AddCryptoCommand}" FontSize="25" FontWeight="Bold" Width="200" Height="50" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>
